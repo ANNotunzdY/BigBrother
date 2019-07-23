@@ -13,7 +13,7 @@ import UIKit
 *  A protocol that represents an object that can manage a network activity indicator.
 */
 public protocol NetworkActivityIndicatorOwner {
-    var networkActivityIndicatorVisible: Bool { get set }
+    var isNetworkActivityIndicatorVisible: Bool { get set }
 }
 
 /**
@@ -63,7 +63,7 @@ open class Manager {
     }
     
     /// The singleton instance.
-    open static let sharedInstance = Manager()
+    public static let sharedInstance = Manager()
     
     /**
         Increments the number of active network requests. If this number was zero before incrementing, this will start animating the status bar network activity indicator.
@@ -90,7 +90,7 @@ open class Manager {
     // MARK: Private
     
     @objc fileprivate func updateNetworkActivityIndicatorVisibility() {
-        application.networkActivityIndicatorVisible = networkActivityIndicatorVisible
+        application.isNetworkActivityIndicatorVisible = networkActivityIndicatorVisible
     }
     
     fileprivate func updateNetworkActivityIndicatorVisibilityDelayed() {
@@ -98,7 +98,7 @@ open class Manager {
             activityIndicatorVisibilityTimer?.invalidate()
             activityIndicatorVisibilityTimer = Timer(timeInterval: invisibilityDelay,
                 target: self, selector: #selector(Manager.updateNetworkActivityIndicatorVisibility), userInfo: nil, repeats: false)
-            RunLoop.main.add(activityIndicatorVisibilityTimer!, forMode: RunLoopMode.commonModes)
+            RunLoop.main.add(activityIndicatorVisibilityTimer!, forMode: RunLoop.Mode.common)
         } else {
             DispatchQueue.main.async {
                 self.updateNetworkActivityIndicatorVisibility()

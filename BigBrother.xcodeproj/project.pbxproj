@@ -7,30 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D447FA671A563C340007108E /* BigBrotherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447FA661A563C340007108E /* BigBrotherTests.swift */; };
 		D499216F1A5612D800B38954 /* BigBrother.h in Headers */ = {isa = PBXBuildFile; fileRef = D499216E1A5612D800B38954 /* BigBrother.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D49921751A5612D800B38954 /* BigBrother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49921691A5612D800B38954 /* BigBrother.framework */; };
-		D499217C1A5612D800B38954 /* URLProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D499217B1A5612D800B38954 /* URLProtocolTests.swift */; };
 		D49921871A5612E400B38954 /* BigBrother.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49921851A5612E400B38954 /* BigBrother.swift */; };
 		D49921881A5612E400B38954 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49921861A5612E400B38954 /* Manager.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D49921761A5612D800B38954 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D49921601A5612D800B38954 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D49921681A5612D800B38954;
-			remoteInfo = BigBrother;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D447FA661A563C340007108E /* BigBrotherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigBrotherTests.swift; sourceTree = "<group>"; };
 		D49921691A5612D800B38954 /* BigBrother.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigBrother.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D499216D1A5612D800B38954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D499216E1A5612D800B38954 /* BigBrother.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigBrother.h; sourceTree = "<group>"; };
-		D49921741A5612D800B38954 /* BigBrotherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBrotherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D499217A1A5612D800B38954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D499217B1A5612D800B38954 /* URLProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolTests.swift; sourceTree = "<group>"; };
 		D49921851A5612E400B38954 /* BigBrother.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigBrother.swift; sourceTree = "<group>"; };
@@ -42,14 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D49921711A5612D800B38954 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D49921751A5612D800B38954 /* BigBrother.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				D49921691A5612D800B38954 /* BigBrother.framework */,
-				D49921741A5612D800B38954 /* BigBrotherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,24 +120,6 @@
 			productReference = D49921691A5612D800B38954 /* BigBrother.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D49921731A5612D800B38954 /* BigBrotherTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D49921821A5612D800B38954 /* Build configuration list for PBXNativeTarget "BigBrotherTests" */;
-			buildPhases = (
-				D49921701A5612D800B38954 /* Sources */,
-				D49921711A5612D800B38954 /* Frameworks */,
-				D49921721A5612D800B38954 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D49921771A5612D800B38954 /* PBXTargetDependency */,
-			);
-			name = BigBrotherTests;
-			productName = BigBrotherTests;
-			productReference = D49921741A5612D800B38954 /* BigBrotherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,11 +132,7 @@
 				TargetAttributes = {
 					D49921681A5612D800B38954 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0800;
-					};
-					D49921731A5612D800B38954 = {
-						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -186,6 +141,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D499215F1A5612D800B38954;
@@ -194,20 +150,12 @@
 			projectRoot = "";
 			targets = (
 				D49921681A5612D800B38954 /* BigBrother */,
-				D49921731A5612D800B38954 /* BigBrotherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D49921671A5612D800B38954 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D49921721A5612D800B38954 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,24 +174,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D49921701A5612D800B38954 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D499217C1A5612D800B38954 /* URLProtocolTests.swift in Sources */,
-				D447FA671A563C340007108E /* BigBrotherTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D49921771A5612D800B38954 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D49921681A5612D800B38954 /* BigBrother */;
-			targetProxy = D49921761A5612D800B38954 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D499217D1A5612D800B38954 /* Debug */ = {
@@ -359,7 +290,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -380,46 +311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		D49921831A5612D800B38954 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BigBrotherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marcelofabri.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		D49921841A5612D800B38954 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BigBrotherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marcelofabri.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -440,15 +332,6 @@
 			buildConfigurations = (
 				D49921801A5612D800B38954 /* Debug */,
 				D49921811A5612D800B38954 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D49921821A5612D800B38954 /* Build configuration list for PBXNativeTarget "BigBrotherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D49921831A5612D800B38954 /* Debug */,
-				D49921841A5612D800B38954 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

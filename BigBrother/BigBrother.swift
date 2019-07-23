@@ -54,12 +54,12 @@ public func removeFromSessionConfiguration(_ configuration: URLSessionConfigurat
 */
 open class URLProtocol: Foundation.URLProtocol {
     
-    open var connection: NSURLConnection?
-    open var mutableData: NSMutableData?
-    open var response: URLResponse?
+    @objc open var connection: NSURLConnection?
+    @objc open var mutableData: NSMutableData?
+    @objc open var response: URLResponse?
     
     /// The singleton instance.
-    open static var manager = BigBrother.Manager.sharedInstance
+    public static var manager = BigBrother.Manager.sharedInstance
     
     // MARK: NSURLProtocol
     
@@ -96,7 +96,7 @@ open class URLProtocol: Foundation.URLProtocol {
     
     // MARK: NSURLConnectionDelegate
     
-    open func connection(_ connection: NSURLConnection!, didReceiveResponse response: URLResponse!) {
+    @objc open func connection(_ connection: NSURLConnection!, didReceiveResponse response: URLResponse!) {
         let policy = URLCache.StoragePolicy(rawValue: request.cachePolicy.rawValue) ?? .notAllowed
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: policy)
         
@@ -104,16 +104,16 @@ open class URLProtocol: Foundation.URLProtocol {
         mutableData = NSMutableData()
     }
     
-    open func connection(_ connection: NSURLConnection!, didReceiveData data: Data!) {
+    @objc open func connection(_ connection: NSURLConnection!, didReceiveData data: Data!) {
         client?.urlProtocol(self, didLoad: data)
         mutableData?.append(data)
     }
     
-    open func connectionDidFinishLoading(_ connection: NSURLConnection!) {
+    @objc open func connectionDidFinishLoading(_ connection: NSURLConnection!) {
         client?.urlProtocolDidFinishLoading(self)
     }
     
-    open func connection(_ connection: NSURLConnection!, didFailWithError error: NSError!) {
+    @objc open func connection(_ connection: NSURLConnection!, didFailWithError error: NSError!) {
         client?.urlProtocol(self, didFailWithError: error)
     }
 }
